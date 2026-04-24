@@ -3,7 +3,7 @@ export default function ComingSoonBackground() {
     <div className="absolute inset-0 z-0 overflow-hidden bg-black">
       <video
         // Cambiamos lg: por min-[1150px]: para que el desplazamiento actúe justo donde el vídeo lo permite
-        className="absolute inset-0 h-full w-full object-cover min-[1200px]:object-[center_calc(100%+50px)]"
+        className="absolute inset-0 h-full w-full object-cover"
         src={"/comingSoonPage/video-background.mp4"}
         poster={"/comingSoonPage/poster-background.jpg"}
         autoPlay
