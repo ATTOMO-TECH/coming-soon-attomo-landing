@@ -330,6 +330,7 @@ export default function ComingSoonLogosCarousel({ speed = 60 }) {
   const [trackHalfWidth, setTrackHalfWidth] = useState(0);
   const [isPaused, setIsPaused] = useState(false);
   const isDraggingRef = useRef(false);
+  const hasDraggedRef = useRef(false);
 
   useEffect(() => {
     if (!trackRef.current) return;
@@ -371,14 +372,15 @@ export default function ComingSoonLogosCarousel({ speed = 60 }) {
         dragConstraints={{ left: -Infinity, right: Infinity }}
         onDragStart={() => {
           isDraggingRef.current = true;
+          hasDraggedRef.current = false;
         }}
         onDrag={(_, info) => {
+          if (Math.abs(info.offset.x) > 5) hasDraggedRef.current = true;
           const current = x.get();
           if (trackHalfWidth > 0) {
             if (current <= -trackHalfWidth) x.set(current + trackHalfWidth);
             if (current > 0) x.set(current - trackHalfWidth);
           }
-          void info;
         }}
         onDragEnd={() => {
           isDraggingRef.current = false;
@@ -407,6 +409,13 @@ export default function ComingSoonLogosCarousel({ speed = 60 }) {
               target="_blank"
               rel="noopener noreferrer"
               onDragStart={(e) => e.preventDefault()}
+              onClickCapture={(e) => {
+                if (hasDraggedRef.current) {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  hasDraggedRef.current = false;
+                }
+              }}
             >
               {content}
             </a>
