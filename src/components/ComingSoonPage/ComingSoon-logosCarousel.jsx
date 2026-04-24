@@ -393,7 +393,7 @@ export default function ComingSoonLogosCarousel({ speed = 60 }) {
             // 1. Aumentamos h y w.
             // Móvil: h-14 w-32 (antes 10 y 24)
             // Desktop: md:h-20 md:w-48 (antes 14 y 36)
-            <div className="relative h-28 w-28 shrink-0 opacity-70 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 md:h-48 md:w-72 lg:h-36 lg:w-48">
+            <div className="relative h-28 w-28 shrink-0 opacity-70 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 md:h-48 md:w-72 lg:h-40 lg:w-48">
               <img
                 src={item.image}
                 alt={item.alt || "Logo"}
