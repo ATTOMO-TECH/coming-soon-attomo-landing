@@ -196,12 +196,12 @@ const logos = [
     alt: "Keiko",
     link: "https://www.keikofusion.com/", // Hay restaurantes y marcas, verificar la correcta.
   },
-  {
+  /*  {
     id: "kilbourne",
     image: "/comingSoonPage/carrouselLogos/kilbourne.png",
     alt: "Kilbourne",
     link: "https://kilbournegroup.com",
-  },
+  }, */
   {
     id: "la-joya",
     image: "/comingSoonPage/carrouselLogos/la-joya.png",
@@ -298,12 +298,12 @@ const logos = [
     alt: "Telmex",
     link: "https://telmex.com/",
   },
-  {
+  /*  {
     id: "trees-coliving",
     image: "/comingSoonPage/carrouselLogos/trees-coliving.png",
     alt: "Trees Coliving",
     link: "https://treescoliving.com",
-  },
+  }, */
   {
     id: "viandas",
     image: "/comingSoonPage/carrouselLogos/viandas.png",
@@ -316,12 +316,12 @@ const logos = [
     alt: "Vivla",
     link: "https://ads.vivla.com/",
   },
-  {
+  /*  {
     id: "zagal-1200",
     image: "/comingSoonPage/carrouselLogos/zagal-1200.png",
     alt: "Zagal 1200",
     link: "https://zagal1200-19fcba1334ba24c469355248a8b62.webflow.io/", // Finca o viñedo específico, mejor confirmar la URL exacta.
-  },
+  }, */
 ];
 
 export default function ComingSoonLogosCarousel({ speed = 60 }) {
@@ -391,7 +391,7 @@ export default function ComingSoonLogosCarousel({ speed = 60 }) {
             // 1. Aumentamos h y w.
             // Móvil: h-14 w-32 (antes 10 y 24)
             // Desktop: md:h-20 md:w-48 (antes 14 y 36)
-            <div className="relative h-28 w-28 shrink-0 opacity-70 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 md:h-48 md:w-72 lg:h-32 lg:w-48">
+            <div className="relative h-28 w-28 shrink-0 opacity-70 grayscale transition-all duration-500 hover:opacity-100 hover:grayscale-0 md:h-48 md:w-72 lg:h-36 lg:w-48">
               <img
                 src={item.image}
                 alt={item.alt || "Logo"}
