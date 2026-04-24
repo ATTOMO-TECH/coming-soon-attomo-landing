@@ -19,7 +19,7 @@ export default function ComingSoonPage({ targetDate, logoSrc }) {
           <ComingSoonMainContent targetDate={targetDate} />
 
           {/* El carrusel se queda pegado abajo dentro de la tarjeta */}
-          <div className="w-full shrink-0 py-2 md:py-4">
+          <div className="w-full shrink-0 pt-2 pb-6 md:py-4">
             <ComingSoonLogosCarousel />
           </div>
         </div>

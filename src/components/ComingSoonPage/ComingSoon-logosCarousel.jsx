@@ -12,13 +12,13 @@ const logos = [
     id: "flipeat",
     image: "/comingSoonPage/carrouselLogos/flipeat.png",
     alt: "FlipEat",
-    link: "https://flipeat.com",
+    link: "https://www.instagram.com/flipeat.app/",
   },
   {
     id: "dahlia",
     image: "/comingSoonPage/carrouselLogos/dahlia.png",
     alt: "Dahlia",
-    link: null, // Hay varias empresas llamadas Dahlia. Revisa si es dahlia.es u otra.
+    link: "https://dahliadahlia.com/es", // Hay varias empresas llamadas Dahlia. Revisa si es dahlia.es u otra.
   },
   {
     id: "real-sociedad",
@@ -82,24 +82,24 @@ const logos = [
     alt: "Alfareal",
     link: "https://www.harmonices.es/",
   },
-  {
+  /* {
     id: "amara-oasis",
     image: "/comingSoonPage/carrouselLogos/amara-oasis.png",
     alt: "Amara Oasis",
     link: "https://thaithreeseasons.com/en?srsltid=AfmBOoprH9xUsra0AAN-lb6_UngDvAKnRoY6m0UVfFUulCW691p9CzaL",
-  },
+  }, */
   {
     id: "boca-juniors",
     image: "/comingSoonPage/carrouselLogos/boca-juniors.png",
     alt: "Boca Juniors",
     link: "https://www.bocajuniors.com.ar/",
   },
-  {
+  /* {
     id: "bstadium",
     image: "/comingSoonPage/carrouselLogos/bstadium.png",
     alt: "Bstadium",
     link: "https://bstadium.es/",
-  },
+  }, */
   {
     id: "burgerjazz",
     image: "/comingSoonPage/carrouselLogos/burgerjazz.png",
@@ -116,7 +116,7 @@ const logos = [
     id: "carso",
     image: "/comingSoonPage/carrouselLogos/carso.png",
     alt: "Carso",
-    link: "https://www.grupocarso.com.mx",
+    link: "https://www.carso.com.mx/",
   },
   {
     id: "casa-chamberi",
@@ -128,7 +128,7 @@ const logos = [
     id: "casa-de-alba",
     image: "/comingSoonPage/carrouselLogos/casa-de-alba.png",
     alt: "Casa De Alba",
-    link: "https://casadealbagourmet.com", // O www.fundacioncasadealba.com dependiendo de la rama
+    link: "https://www.fundacioncasadealba.com/", // O www.fundacioncasadealba.com dependiendo de la rama
   },
   {
     id: "cayumas",
@@ -146,7 +146,7 @@ const logos = [
     id: "dem",
     image: "/comingSoonPage/carrouselLogos/dem.png",
     alt: "Dem",
-    link: null, // Demasiado genérico (¿Dem Consulting? ¿Dem Studio?).
+    link: "https://dehesaelmilagro.com/", // Demasiado genérico (¿Dem Consulting? ¿Dem Studio?).
   },
   {
     id: "dkf",
@@ -170,7 +170,7 @@ const logos = [
     id: "gvre",
     image: "/comingSoonPage/carrouselLogos/gvre.png",
     alt: "GVRE",
-    link: null, // ¿Global Vision Real Estate? Mejor verificar.
+    link: "https://gvre.es/", // ¿Global Vision Real Estate? Mejor verificar.
   },
   {
     id: "hifas-da-terra",
@@ -188,13 +188,13 @@ const logos = [
     id: "imeriti",
     image: "/comingSoonPage/carrouselLogos/imeriti.png",
     alt: "Imeriti",
-    link: "https://imeriti.com",
+    link: "https://imereti.es/",
   },
   {
     id: "keiko",
     image: "/comingSoonPage/carrouselLogos/keiko.png",
     alt: "Keiko",
-    link: null, // Hay restaurantes y marcas, verificar la correcta.
+    link: "https://www.keikofusion.com/", // Hay restaurantes y marcas, verificar la correcta.
   },
   {
     id: "kilbourne",
@@ -212,55 +212,55 @@ const logos = [
     id: "lalala",
     image: "/comingSoonPage/carrouselLogos/lalala.png",
     alt: "Lalala",
-    link: "https://grupolalala.com",
+    link: "https://grupolalala.com/",
   },
   {
     id: "lalupita",
     image: "/comingSoonPage/carrouselLogos/lalupita.png",
     alt: "Lalupita",
-    link: "https://lalupita.es",
+    link: "https://www.lalupita.es/",
   },
   {
     id: "lucas-vidal",
     image: "/comingSoonPage/carrouselLogos/lucas-vidal.png",
     alt: "Lucas Vidal",
-    link: "https://lucasvidal.com",
+    link: "https://www.lucasvidal.com/",
   },
   {
     id: "magoni",
     image: "/comingSoonPage/carrouselLogos/magoni.png",
     alt: "Magoni",
-    link: "https://casamagoni.com",
+    link: "https://www.magoni.co/",
   },
   {
     id: "maxiloteam",
     image: "/comingSoonPage/carrouselLogos/maxiloteam.png",
     alt: "Maxiloteam",
-    link: "https://maxiloteam.com",
+    link: "https://www.maxiloteam.com/",
   },
   {
     id: "metodo-r",
     image: "/comingSoonPage/carrouselLogos/metodo-r.png",
     alt: "Metodo R",
-    link: "https://metodor.com",
+    link: "https://metodo-r.com/",
   },
   {
     id: "mrgo",
     image: "/comingSoonPage/carrouselLogos/mrgo.png",
     alt: "Mrgo",
-    link: "https://mrgo.es",
+    link: "https://mrgo-cdef92.webflow.io/",
   },
   {
     id: "nutnut",
     image: "/comingSoonPage/carrouselLogos/nutnut.png",
     alt: "Nutnut",
-    link: "https://nutnut.es",
+    link: "https://www.nutnutshop.com/",
   },
   {
     id: "optimum",
     image: "/comingSoonPage/carrouselLogos/optimum.png",
     alt: "Optimum",
-    link: "https://optimumre.com",
+    link: "https://youroptimum.com/",
   },
   {
     id: "peterhousepartners",
@@ -278,25 +278,25 @@ const logos = [
     id: "spherika",
     image: "/comingSoonPage/carrouselLogos/spherika.png",
     alt: "Spherika",
-    link: "https://spherika.es",
+    link: "https://caviarspherika.com/",
   },
   {
     id: "tasafy",
     image: "/comingSoonPage/carrouselLogos/tasafy.png",
     alt: "Tasafy",
-    link: "https://tasafy.com",
+    link: "https://www.tasafy.com/?gad_source=1&gad_campaignid=21179744081&gbraid=0AAAAAofdEWInnjXDCkKyXo0ii0wVsUK8Y&gclid=CjwKCAjwqazPBhALEiwAOuXqdLOOeKQnVg389zriwt5kZ-Lm6k10awCxWJYj6e7S1hAIDbx0wHCsrBoCzoEQAvD_BwE",
   },
   {
     id: "tc",
     image: "/comingSoonPage/carrouselLogos/tc.png",
     alt: "TC",
-    link: null, // Demasiado genérico.
+    link: "https://tccollection.es/", // Demasiado genérico.
   },
   {
     id: "telmex",
     image: "/comingSoonPage/carrouselLogos/telmex.png",
     alt: "Telmex",
-    link: "https://telmex.com",
+    link: "https://telmex.com/",
   },
   {
     id: "trees-coliving",
@@ -308,19 +308,19 @@ const logos = [
     id: "viandas",
     image: "/comingSoonPage/carrouselLogos/viandas.png",
     alt: "Viandas",
-    link: "https://viandas.es",
+    link: "https://viandasstores.com/es/",
   },
   {
     id: "vivla",
     image: "/comingSoonPage/carrouselLogos/vivla.png",
     alt: "Vivla",
-    link: "https://www.vivla.com",
+    link: "https://ads.vivla.com/",
   },
   {
     id: "zagal-1200",
     image: "/comingSoonPage/carrouselLogos/zagal-1200.png",
     alt: "Zagal 1200",
-    link: null, // Finca o viñedo específico, mejor confirmar la URL exacta.
+    link: "https://zagal1200-19fcba1334ba24c469355248a8b62.webflow.io/", // Finca o viñedo específico, mejor confirmar la URL exacta.
   },
 ];
 

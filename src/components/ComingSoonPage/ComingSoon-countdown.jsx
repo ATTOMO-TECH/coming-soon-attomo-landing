@@ -24,15 +24,15 @@ export default function ComingSoonCountdown({
   }, [targetMs]);
 
   const units = [
-    { value: time.days, label: "DAYS" },
-    { value: time.hours, label: "HOURS" },
-    { value: time.minutes, label: "MINUTES" },
-    { value: time.seconds, label: "SECONDS" },
+    { value: time.days, label: "DÍAS" },
+    { value: time.hours, label: "HORAS" },
+    { value: time.minutes, label: "MINUTOS" },
+    { value: time.seconds, label: "SEGUNDOS" },
   ];
 
   return (
     <div className="rounded-2xl border border-white/10 bg-white/5 px-4 py-3 backdrop-blur-md md:px-10 md:py-5">
-      <div className="flex items-end justify-center gap-4 md:gap-10">
+      <div className="flex items-end justify-center gap-8 p-4 md:p-0 md:gap-10">
         {units.map((u) => (
           <div key={u.label} className="flex flex-col items-center">
             <span className="text-6xl font-medium leading-none text-white tabular-nums md:text-6xl lg:text-7xl">
