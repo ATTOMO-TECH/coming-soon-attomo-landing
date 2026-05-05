@@ -1,5 +1,14 @@
 import { useEffect, useMemo, useState } from "react";
 
+const CYCLE_MS = 48 * 60 * 60 * 1000;
+const COUNTDOWN_MS = 15 * 24 * 60 * 60 * 1000;
+
+function getCurrentTarget(anchorMs) {
+  const elapsed = Date.now() - anchorMs;
+  const cycleIndex = Math.floor(elapsed / CYCLE_MS);
+  return anchorMs + cycleIndex * CYCLE_MS + COUNTDOWN_MS;
+}
+
 function getTimeLeft(target) {
   const diff = Math.max(0, target - Date.now());
   const days = Math.floor(diff / 86_400_000);
@@ -12,16 +21,23 @@ function getTimeLeft(target) {
 const pad = (n) => String(n).padStart(2, "0");
 
 export default function ComingSoonCountdown({
-  targetDate = "2026-05-13T00:00:00",
+  cycleAnchor = "2026-05-05T00:00:00",
 }) {
-  const targetMs = useMemo(() => new Date(targetDate).getTime(), [targetDate]);
-  const [time, setTime] = useState(() => getTimeLeft(targetMs));
+  const anchorMs = useMemo(
+    () => new Date(cycleAnchor).getTime(),
+    [cycleAnchor],
+  );
+  const [time, setTime] = useState(() =>
+    getTimeLeft(getCurrentTarget(anchorMs)),
+  );
 
   useEffect(() => {
-    setTime(getTimeLeft(targetMs));
-    const id = setInterval(() => setTime(getTimeLeft(targetMs)), 1000);
+    const id = setInterval(
+      () => setTime(getTimeLeft(getCurrentTarget(anchorMs))),
+      1000,
+    );
     return () => clearInterval(id);
-  }, [targetMs]);
+  }, [anchorMs]);
 
   const units = [
     { value: time.days, label: "DÍAS" },
