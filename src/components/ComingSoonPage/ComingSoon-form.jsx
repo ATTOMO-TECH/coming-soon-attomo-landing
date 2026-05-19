@@ -2,6 +2,24 @@ import { useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion, useAnimationControls } from "framer-motion";
 
 const WEB3FORMS_ENDPOINT = "https://api.web3forms.com/submit";
+const HOLDED_CONTACT_ENDPOINT = "/api/holded-contact";
+
+// Registers the lead in Holded via the Netlify function. Best-effort:
+// errors are logged but never surfaced to the user.
+async function createHoldedContact({ nombre, email, telefono, mensaje }) {
+  try {
+    const res = await fetch(HOLDED_CONTACT_ENDPOINT, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ nombre, email, telefono, mensaje }),
+    });
+    if (!res.ok) {
+      console.error("Holded contact creation failed:", await res.text());
+    }
+  } catch (err) {
+    console.error("Holded contact creation failed:", err);
+  }
+}
 
 export default function ComingSoonForm({
   subject = "Contacto desde la web de ATTOMO",
@@ -17,6 +35,8 @@ export default function ComingSoonForm({
   const nombreRef = useRef(null);
   const shakeControls = useAnimationControls();
 
+  //Shake the button effect and focus the first input when the "attomo:contact-click" event is received.
+  //This allows other parts of the page (e.g. the "Contacta con nosotros" button in the PartnersSection) to trigger attention to the form.
   useEffect(() => {
     const handler = () => {
       nombreRef.current?.focus();
@@ -42,6 +62,8 @@ export default function ComingSoonForm({
     e.preventDefault();
     setStatus("sending");
 
+    const submitted = { ...values };
+
     try {
       const res = await fetch(WEB3FORMS_ENDPOINT, {
         method: "POST",
@@ -52,17 +74,20 @@ export default function ComingSoonForm({
         body: JSON.stringify({
           access_key: import.meta.env.VITE_WEB3FORMS_ACCESS_KEY,
           subject,
-          from_name: values.nombre,
-          nombre: values.nombre,
-          email: values.email,
-          telefono: values.telefono,
-          mensaje: values.mensaje,
+          from_name: submitted.nombre,
+          nombre: submitted.nombre,
+          email: submitted.email,
+          telefono: submitted.telefono,
+          mensaje: submitted.mensaje,
         }),
       });
       const data = await res.json();
       if (data.success) {
         setStatus("success");
         setValues({ nombre: "", email: "", telefono: "", mensaje: "" });
+        // Best-effort: also register the lead in Holded. A failure here must
+        // not affect the user — the email has already gone through.
+        createHoldedContact(submitted);
       } else {
         setStatus("error");
       }

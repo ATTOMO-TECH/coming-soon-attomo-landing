@@ -18,4 +18,11 @@ export default defineConfig([
       parserOptions: { ecmaFeatures: { jsx: true } },
     },
   },
+  {
+    // Netlify serverless functions run on Node, not in the browser.
+    files: ['netlify/functions/**/*.js'],
+    languageOptions: {
+      globals: globals.node,
+    },
+  },
 ])
