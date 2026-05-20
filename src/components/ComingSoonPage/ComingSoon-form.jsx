@@ -114,7 +114,7 @@ export default function ComingSoonForm({
       <div className="grid grid-cols-2 gap-x-4 gap-y-4 md:gap-x-6 md:gap-y-5">
         <div className="flex flex-col items-start">
           <label className={labelClass} htmlFor="csf-nombre">
-            Nombre
+            Empresa
           </label>
           <input
             id="csf-nombre"
